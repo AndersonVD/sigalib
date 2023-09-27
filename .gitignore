@@ -68,6 +68,8 @@ buildNumber.properties
 # Local History for Visual Studio Code
 .history/
 
+.env
+
 # Built Visual Studio Code Extensions
 *.vsix
 
