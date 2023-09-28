@@ -2,6 +2,8 @@
 
 Biblioteca para acesso aos recursos do sistema SIGAA do Instituto Federal Catarinense - Campus Rio do Sul.
 
+    No primeiro uso as bibliotecas do playwrigth serão baixadas e instaladas, isso pode demorar um pouco.
+
 ## Objeto
 
 - [ ] `Sigaa(username, password)` - Realiza o login no sistema SIGAA e instancia a biblioteca.
