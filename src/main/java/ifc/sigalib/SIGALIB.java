@@ -1,9 +1,14 @@
 package ifc.sigalib;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+
 import com.microsoft.playwright.Browser;
 import com.microsoft.playwright.BrowserType;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
+
+import ifc.sigalib.models.Aluno;
 
 public class SIGALIB {
     private String user;
@@ -31,6 +36,15 @@ public class SIGALIB {
             page.waitForURL("https://sig.ifc.edu.br/sigaa/portais/discente/discente.jsf");
             return page.content();
         }
+    }
+
+    public String get_user_info() {
+        String pageContent = getPage();
+        Document doc = Jsoup.parse(pageContent);
+        Aluno aluno = new Aluno();
+        aluno.setMatricula(Integer
+                .parseInt(doc.select("#agenda-docente > table > tbody > tr:nth-child(1) > td:nth-child(2)").text()));
+        return aluno.toString();
     }
 
 }
