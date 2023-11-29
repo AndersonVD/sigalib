@@ -1,11 +1,10 @@
 package ifc.sigalib;
 
+import ifc.sigalib.commands.Command;
+
 public class App {
     public static void main(String[] args) {
-
-        SIGALIB sigalib = new SIGALIB("seuUsuario", "suaSenha");
-        System.out.println(sigalib.getPage());
+        SIGALIB sigalib = SIGALIB.getInstance("seuUsuario", "suaSenha");
 
     }
-
 }
