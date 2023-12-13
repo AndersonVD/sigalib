@@ -65,4 +65,17 @@ public class Aluno {
         this.entrada = entrada;
     }
 
+    @Override
+    public String toString() {
+        return "{" +
+                " nome='" + getNome() + "'" +
+                ", matricula='" + getMatricula() + "'" +
+                ", curso='" + getCurso() + "'" +
+                ", nivel='" + getNivel() + "'" +
+                ", status='" + getStatus() + "'" +
+                ", email='" + getEmail() + "'" +
+                ", entrada='" + getEntrada() + "'" +
+                "}";
+    }
+
 }
