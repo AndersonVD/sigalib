@@ -15,6 +15,11 @@ import com.microsoft.playwright.ElementHandle;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.Playwright;
 
+/**
+ * The PageNavigate class represents a utility for navigating web pages and
+ * performing actions on them.
+ * It uses Playwright and Firefox browser to automate web interactions.
+ */
 public class PageNavigate {
 
     private Playwright playwright;
