@@ -60,8 +60,9 @@ public class PageNavigate {
         Page page = firefoxBrowser();
         page = login_page(page, user, password);
         page.waitForURL("https://sig.ifc.edu.br/sigaa/portais/discente/discente.jsf");
-
-        return page.content();
+        String text = page.content();
+        close();
+        return text;
     }
 
     public Map<String, String> frequencyPage(String user, String password) throws IOException {
@@ -85,7 +86,7 @@ public class PageNavigate {
             page.goBack();
             page.goBack();
         }
-
+        close();
         return frequency;
 
     }
@@ -122,7 +123,7 @@ public class PageNavigate {
             page.goBack();
             page.goBack();
         }
-
+        close();
         return grades;
     }
 

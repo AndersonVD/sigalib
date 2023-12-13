@@ -60,12 +60,12 @@ public class SIGALIB {
         Aluno aluno = new Aluno();
         aluno.setMatricula(Integer
                 .parseInt(doc.select("#agenda-docente > table > tbody > tr:nth-child(1) > td:nth-child(2)").text()));
-        aluno.setNome(doc.select("#agenda-docente > table > tbody > tr:nth-child(2) > td:nth-child(2)").text());
-        aluno.setCurso(doc.select("#agenda-docente > table > tbody > tr:nth-child(3) > td:nth-child(2)").text());
+        aluno.setNome(doc.select("#agenda-docente > table > tbody > tr:nth-child(3) > td:nth-child(2)").text());
+        aluno.setCurso(doc.select("#agenda-docente > table > tbody > tr:nth-child(2) > td:nth-child(2)").text());
         aluno.setNivel(doc.select("#agenda-docente > table > tbody > tr:nth-child(4) > td:nth-child(2)").text());
-        aluno.setStatus(doc.select("#agenda-docente > table > tbody > tr:nth-child(5) > td:nth-child(2)").text());
-        aluno.setEmail(doc.select("#agenda-docente > table > tbody > tr:nth-child(6) > td:nth-child(2)").text());
-        aluno.setEntrada(doc.select("#agenda-docente > table > tbody > tr:nth-child(7) > td:nth-child(2)").text());
+        aluno.setStatus(doc.select("#agenda-docente > table > tbody > tr:nth-child(4) > td:nth-child(2)").text());
+        aluno.setEmail(doc.select("#agenda-docente > table > tbody > tr:nth-child(5) > td:nth-child(2)").text());
+        aluno.setEntrada(doc.select("#agenda-docente > table > tbody > tr:nth-child(6) > td:nth-child(2)").text());
         return aluno.toString();
     }
 
